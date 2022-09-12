@@ -1,0 +1,29 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block titulo%} {%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}>
+</head>
+<body>
+<nav id='menu'>
+  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul>
+    <li><a href='http://'>inicio</a></li>
+    <li><a class='dropdown-arrow' href='http://'>localidade</a>
+      <ul class='sub-menus'>
+        <li><a href='http://'>norte</a></li>
+        <li><a href='http://'>sul</a></li>
+        <li><a href='http://'>leste</a></li>
+        <li><a href='http://'>oeste</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+{%block conteudo%}
+
+{%endblock%}
+</body>
+</html>
